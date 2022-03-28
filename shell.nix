@@ -8,5 +8,7 @@ mkShell {
     gcc
 
     cling
+
+    rapidcheck
   ];
 }
