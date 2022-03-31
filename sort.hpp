@@ -54,6 +54,11 @@ void merge_sort(T* array, size_t size)
         index_to_sorted_index[replacement_index] = new_sorted_index;
         sorted_index_to_index[new_sorted_index] = replacement_index;
     }
+
+    delete[] sorted_pointers;
+
+    delete[] index_to_sorted_index;
+    delete[] sorted_index_to_index;
 }
 
 template <typename T>
@@ -115,6 +120,8 @@ void merge_sort_pointers_merge(T** begin, T** middle, T** end)
         cur_filling++;
         cur_h2++;
     }
+
+    delete[] first_part_copy;
 }
 
 template <typename T>
